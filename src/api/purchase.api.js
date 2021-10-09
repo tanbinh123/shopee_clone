@@ -13,6 +13,13 @@ const purchaseApi = {
       }
     })
   },
+  getPurchases(status) {
+    return http.get(URL, {
+      params: {
+        status
+      }
+    })
+  },
   updatePurchases(data) {
     return http.put(`${URL}/update-purchase`, data)
   },
