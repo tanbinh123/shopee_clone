@@ -7,12 +7,15 @@ import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import store from "./store"
 import "./i18n/i18n"
+import { HelmetProvider } from "react-helmet-async"
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <App />
+        <HelmetProvider>
+          <App />
+        </HelmetProvider>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,

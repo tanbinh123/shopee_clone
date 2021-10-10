@@ -1,7 +1,5 @@
-import React from "react"
-
 function Fallback() {
-  return <div>Fallback</div>
+  return null
 }
 
 export default Fallback

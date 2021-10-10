@@ -10,6 +10,7 @@ import { getProductDetail, addToCart } from "./productDetail.slice"
 import { toast } from "react-toastify"
 import * as S from "./productDetail.style"
 import { getCartPurchases } from "../Cart/cart.slice"
+import { Helmet } from "react-helmet-async"
 
 function ProductDetail() {
   const [product, setProduct] = useState({})
@@ -82,6 +83,9 @@ function ProductDetail() {
 
   return (
     <div>
+      <Helmet>
+        <title>{product.name}</title>
+      </Helmet>
       {product && (
         <div className="container">
           <S.ProductBriefing>

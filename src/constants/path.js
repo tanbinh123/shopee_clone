@@ -1,4 +1,4 @@
-// {
+// export const path {
 //   home: "/",
 //   login: "/login",
 //   register: "/register",
@@ -31,5 +31,3 @@ class Path {
 }
 
 export const path = new Path()
-
-console.log(path.cart)

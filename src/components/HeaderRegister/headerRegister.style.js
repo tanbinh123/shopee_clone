@@ -19,6 +19,8 @@ export const HeaderBrand = styled.div`
   align-items: center;
 `
 export const HeaderIcon = styled(Link)`
+  display: flex;
+  align-items: baseline;
   margin-top: -0.5rem;
   svg {
     fill: #ee4d2d;

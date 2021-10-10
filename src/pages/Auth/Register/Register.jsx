@@ -11,7 +11,7 @@ import { path } from "src/constants/path"
 import { rules } from "src/constants/rules"
 import { register } from "../auth.slice"
 import * as S from "./register.style"
-
+import { Helmet } from "react-helmet-async"
 function Register() {
   const {
     control,
@@ -53,6 +53,9 @@ function Register() {
 
   return (
     <S.Register>
+      <Helmet>
+        <title>Đăng ký</title>
+      </Helmet>
       <S.Container className="container">
         <S.Banner />
         <S.FormWrapper>

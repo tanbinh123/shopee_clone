@@ -8,6 +8,7 @@ import { purchasesStatus } from "src/constants/status"
 import { path } from "src/constants/path"
 import { generateNameId } from "src/utils/helper"
 import qs from "query-string"
+import { Helmet } from "react-helmet-async"
 function Purchase() {
   const [purchases, setPurchases] = useState()
 
@@ -24,6 +25,9 @@ function Purchase() {
   const handleActive = value => () => Number(value) === Number(status)
   return (
     <div>
+      <Helmet>
+        <title>Đơn mua</title>
+      </Helmet>
       <S.PurchaseTabs>
         <S.PurchaseTabItem
           isActive={handleActive(purchasesStatus.all)}

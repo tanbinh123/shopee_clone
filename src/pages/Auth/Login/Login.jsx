@@ -11,6 +11,7 @@ import { login } from "../auth.slice"
 import { Link, useHistory } from "react-router-dom"
 import { Controller, useForm } from "react-hook-form"
 import { Button } from "src/assets/styles/utils"
+import { Helmet } from "react-helmet-async"
 
 function Login() {
   const {
@@ -52,6 +53,9 @@ function Login() {
 
   return (
     <S.Register>
+      <Helmet>
+        <title>Đăng Nhập</title>
+      </Helmet>
       <S.Container className="container">
         <S.Banner />
         <S.FormWrapper>
@@ -95,7 +99,7 @@ function Login() {
             </S.FormButton>
           </S.Form>
           <S.FormFooter>
-            <span>Bạn mới biết đến Shopee?</span>
+            <span>Bạn mới biết đến MyShop?</span>
             <Link to={path.register} className="link">
               Đăng ký
             </Link>

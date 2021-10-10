@@ -6,6 +6,7 @@ import SearchItemResult from "src/components/SearchItemResult/SearchItemResult"
 import * as S from "./home.style"
 import { getCategories, getProducts } from "./home.slice"
 import useQuery from "src/hooks/useQuery"
+import { Helmet } from "react-helmet-async"
 
 function Home() {
   const [categories, setCategories] = useState([])
@@ -56,6 +57,11 @@ function Home() {
 
   return (
     <div>
+      <Helmet>
+        <title>
+          MyShop Việt Nam | Mua và bán trên ứng dụng di động và website
+        </title>
+      </Helmet>
       <S.Container className="container">
         <S.Side>
           <FilterPanel categories={categories} filters={filters} />

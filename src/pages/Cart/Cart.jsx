@@ -12,6 +12,7 @@ import {
 } from "./cart.slice"
 import keyBy from "lodash/keyBy"
 import { toast } from "react-toastify"
+import { Helmet } from "react-helmet-async"
 
 function Cart() {
   const purchases = useSelector(state => state.cart.purchases)
@@ -169,6 +170,9 @@ function Cart() {
 
   return (
     <div className="container">
+      <Helmet>
+        <title>Giỏ hàng</title>
+      </Helmet>
       <div>
         <S.ProductHeader>
           <S.ProductHeaderCheckbox>
